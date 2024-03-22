@@ -7,7 +7,7 @@ interface MeetingState {
 
 const useMeetingStore = create<MeetingState>()((set) => ({
   storedMeeting: null,
-  setStoredMeeting: (newMeeting) => set((state) => ({ storedMeeting: newMeeting })),
+  setStoredMeeting: (newMeeting) => set(() => ({ storedMeeting: newMeeting })),
 }));
 
 export default useMeetingStore;
